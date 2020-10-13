@@ -1,0 +1,10 @@
+{
+    "service": {
+        "hostname": "localhost",
+        "port": 6100,
+        "herp_uri": "http://localhost:5050",
+        "id": "5f855882eb4ec3e93139bdd4",
+        "user": "skeleton-ts.herp.app@herp.app",
+        "password": "3vLWDzdre%k{c.3~<ux-.%.a:HG+AV9G"
+    }
+}
