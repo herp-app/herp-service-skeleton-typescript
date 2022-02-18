@@ -2,8 +2,7 @@ import Nconf from 'nconf';
 import * as Path from 'path';
 import * as Os from 'os';
 import * as Fs from 'fs';
-import { IConfiguration } from './interfaces';
-
+import { IConfiguration } from './interfaces/microservice';
 
 /**
  * The config object the system will work with

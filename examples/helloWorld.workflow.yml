@@ -1,0 +1,30 @@
+_hid: Workflow.620e569fc7898470b35bca3a
+type: workflow
+bundle: helloWorld
+name: helloWorldWorkflow
+label: Greet a customer
+timeout: 5
+scope:
+  - _hid: NodeConfiguration.620e5726b12ca4078d40e8b7
+    name: CustomerChangeNode
+    nodeReference: nodeTypeMeta.60bd8989fbb09614608860b6
+    configuration:
+      entity: Entity.6124b609efc4eedce5fe3aa1
+    from: []
+    to:
+      - _hid: Document.620e59d532e84a1403ecc734
+        address: NodeConfiguration.620e58498d4f24bfee4e8260
+        source: content
+        destination: data
+  - _hid: NodeConfiguration.620e58498d4f24bfee4e8260
+    name: callTheMicroservice
+    nodeReference: nodeTypeMeta.61923fb7341d098c5ea2ede9
+    configuration:
+      microservice: Microservice.620e531130bbd22a50055269
+      endpointId: Document.620e53557223b03019069a64
+    from:
+      - _hid: Document.620e59d532e84a1403ecc73d
+        address: NodeConfiguration.620e5726b12ca4078d40e8b7
+        source: content
+        destination: data
+    to: []
